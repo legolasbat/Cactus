@@ -2,9 +2,10 @@
 
 #include "Core.h"
 
-namespace Cactus {
+namespace Cactus
+{
 
-	class CT_API Application
+	class CACTUS_API Application
 	{
 	public:
 		Application();
