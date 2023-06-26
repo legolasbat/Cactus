@@ -19,6 +19,9 @@ project "Cactus"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "ctpch.h"
+	pchsource "Cactus/src/ctpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

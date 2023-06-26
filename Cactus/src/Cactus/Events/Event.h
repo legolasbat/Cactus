@@ -2,8 +2,6 @@
 
 #include "Cactus\Core.h"
 
-#include <string>
-
 namespace Cactus {
 
 	// Events are blocking
