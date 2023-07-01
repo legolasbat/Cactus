@@ -1,13 +1,13 @@
 #include "ctpch.h"
 #include "Application.h"
 
-#include "Cactus/Log.h"
 #include "Events/ApplicationEvent.h"
 
 namespace Cactus {
 
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -16,17 +16,10 @@ namespace Cactus {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			CACTUS_TRACE(e);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			CACTUS_TRACE(e);
-		}
-
-		while (true);
 	}
 	
 }

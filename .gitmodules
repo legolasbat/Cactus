@@ -1,3 +1,6 @@
 [submodule "Cactus/vendor/spdlog"]
 	path = Cactus/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Cactus/vendor/GLFW"]
+	path = Cactus/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
